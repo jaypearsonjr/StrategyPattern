@@ -19,12 +19,14 @@ namespace strategyPattern
             foreach (var weapon in weaponCach)
             {
                 ICharacter king = new King(weapon);
+
                 Console.WriteLine(king.useWeapon());
             }
 
             foreach (var weapon in weaponCach)
             {
                 ICharacter queen = new Queen(weapon);
+
                 Console.WriteLine(queen.useWeapon());
             }
 
