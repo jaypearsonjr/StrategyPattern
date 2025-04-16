@@ -1,13 +1,14 @@
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{00000000-0000-0000-0000-000000000000}</ProjectGuid>
+    <ProjectGuid>{1CBB6FA6-2E9F-314B-38CA-A8B2476F33D7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
     <AssemblyName>ConsoleApplication</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -19,6 +20,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +30,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>StrategyPattern</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -37,6 +43,103 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Character\ICharacter.cs" />
+    <Compile Include="Character\King.cs" />
+    <Compile Include="Character\Queen.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Weapon\Bow.cs" />
+    <Compile Include="Weapon\IWeapon.cs" />
+    <Compile Include="Weapon\Knife.cs" />
+    <Compile Include="Weapon\Sword.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\FETCH_HEAD" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\logs\refs\remotes\origin\master" />
+    <None Include=".git\objects\01\0b300b20a0c317556a734ce1340b7e78bee15f" />
+    <None Include=".git\objects\04\a8c05171a428aec19941e62a8e822e127c26fb" />
+    <None Include=".git\objects\09\00e15f9fbf5eae701756822d24afa984aea743" />
+    <None Include=".git\objects\17\9502cb4711ada9b0cc2e0b94850107c52289f1" />
+    <None Include=".git\objects\1d\f25f8d96394492e9074fa465f17e221fb5d3c2" />
+    <None Include=".git\objects\1e\352c109310a764b85cf428fe3cb66880e3dc0b" />
+    <None Include=".git\objects\1f\a3728ad8c239174e866bbc4ce9639a4c554af4" />
+    <None Include=".git\objects\3b\99a871c48d0b732ff240ef59de7d69491cf47e" />
+    <None Include=".git\objects\40\09af48e404f0ceb614c6b0dbb26842bdaca658" />
+    <None Include=".git\objects\41\4c1be5d671ecbbbf67c9318c3e0e1a7096cabf" />
+    <None Include=".git\objects\46\7e98f4efcaccfc9445c612d6839703ff78c49e" />
+    <None Include=".git\objects\4e\68a93561ac98f4cceb98b4cf5909fbc2f06883" />
+    <None Include=".git\objects\5e\aa45b2dbb7c73a727249c34c773284075365e6" />
+    <None Include=".git\objects\64\46ced42354dede08a7d82cf7c558ed845ede36" />
+    <None Include=".git\objects\65\ee8cb079dc2dba7215a4a4ad37484864eddb92" />
+    <None Include=".git\objects\75\335a84dc4dd62459349ff6bce2ec57ad51b9f3" />
+    <None Include=".git\objects\75\39019b10dd976a8d7d15a2afb3571d3df38c2e" />
+    <None Include=".git\objects\79\149c7c71e90ee3b1a012f355767b23005cb547" />
+    <None Include=".git\objects\81\25e27e09332b76398900878ff0a1c680fbe1bb" />
+    <None Include=".git\objects\81\3101d181ca9305a63008920e5d19a76fe96ff2" />
+    <None Include=".git\objects\85\648e29067ee5472721b7a6fa1cc192b0b44d39" />
+    <None Include=".git\objects\86\9ea7c516518d7b4cb30f5054bd50ca19eeadc7" />
+    <None Include=".git\objects\91\fd1c97cf266c7071d638fb0f4521343ad18032" />
+    <None Include=".git\objects\97\a1abb92f155df14d783a362923e92c62f294c9" />
+    <None Include=".git\objects\9a\596e235fcabf383b014ebe8234bd6a425c7f65" />
+    <None Include=".git\objects\a4\0b7614fa503f009bf6fb84fd3cf2bdafea3daa" />
+    <None Include=".git\objects\a9\f99f922d9f17e8280935a137d8d693f7a544a4" />
+    <None Include=".git\objects\b6\eaf6a30010c4d7c3fb54a17f768bd2cce557e9" />
+    <None Include=".git\objects\c3\1cb9bf426fb50633d73aa054d6b24f82ddd6e7" />
+    <None Include=".git\objects\c6\41a6f8b1a36bdb4dd032b35d09886d1619816a" />
+    <None Include=".git\objects\cb\08c4e0b54c4b37ccad2cb9917e4a2cc00dcd7f" />
+    <None Include=".git\objects\cb\a7383b6ee8b8d4cdf67dc42bfcd58d44b19047" />
+    <None Include=".git\objects\ce\1697ae883770fad405eca7304a2677301018d9" />
+    <None Include=".git\objects\ce\dc6586527f798f1b1be8ff6db9e5ec3617935a" />
+    <None Include=".git\objects\cf\51f687705b2d4331925d24a748f30362e80825" />
+    <None Include=".git\objects\dd\3bb9f4f6aa0b0cbd853544259e0a772419bdb0" />
+    <None Include=".git\objects\df\42e2b16d67d917837b8ed34b063c1e276429ee" />
+    <None Include=".git\objects\e5\8174d91abbd957b017f05ee556953c488e10ee" />
+    <None Include=".git\objects\ec\e25168e7f0174517460b810717497c9b16e22a" />
+    <None Include=".git\objects\fa\597a976def20d1834227dcffeb8acbf6dae5e4" />
+    <None Include=".git\objects\fb\855592a3aa7ac84946e110825402b250bbb308" />
+    <None Include=".git\objects\fe\62bbd3fad38323f956f24ad95eb648d2dfd0bd" />
+    <None Include=".git\ORIG_HEAD" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".git\refs\remotes\origin\master" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\strategyPattern\CopilotIndices\17.13.444.19527\CodeChunks.db" />
+    <None Include=".vs\strategyPattern\CopilotIndices\17.13.444.19527\CodeChunks.db-shm" />
+    <None Include=".vs\strategyPattern\CopilotIndices\17.13.444.19527\CodeChunks.db-wal" />
+    <None Include=".vs\strategyPattern\CopilotIndices\17.13.444.19527\SemanticSymbols.db" />
+    <None Include=".vs\strategyPattern\CopilotIndices\17.13.444.19527\SemanticSymbols.db-shm" />
+    <None Include=".vs\strategyPattern\CopilotIndices\17.13.444.19527\SemanticSymbols.db-wal" />
+    <None Include=".vs\strategyPattern\FileContentIndex\26aaeec9-35f4-400b-911d-37cfe51c48c4.vsidx" />
+    <None Include=".vs\strategyPattern\FileContentIndex\2cd12a8b-6108-4743-9e32-375f9b9995c5.vsidx" />
+    <None Include=".vs\strategyPattern\FileContentIndex\3fd0a97c-c8c1-4f18-b7ed-a3c55e06523c.vsidx" />
+    <None Include=".vs\strategyPattern\v17\.wsuo" />
+    <None Include=".vs\strategyPattern\v17\DocumentLayout.json" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\objects\pack\" />
+    <Folder Include=".git\refs\tags\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

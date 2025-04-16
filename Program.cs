@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace strategyPattern
+namespace StrategyPattern
 {
     class Program
     {
         static void Main(string[] args)
         {
             IList<IWeapon> weaponCach = new List<IWeapon>();
+
             IWeapon sword = new Sword();
             IWeapon knife = new Knife();
             IWeapon bow = new Bow();
